@@ -4,11 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="" />
+    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/AddressDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/MilestoneDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/SectionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/TransportPlanDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/mapper/AddressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/TransportPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/AddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/MilestoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/SectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/TransportPlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,10 +63,45 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/LogisticsApp",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+    "last_opened_file_path": "D:/Java_Spring/week3/hr",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="hu.webuni.logistics.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\LogisticsApp\src\main\java\hu\webuni\logistics\dto" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="hu.webuni.logistics.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hu.webuni.logistics.repository" />
+      <recent name="hu.webuni.logistics.dto" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LogisticsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.webuni.logistics.LogisticsApplication" />
+      <module name="logistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.webuni.logistics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LogisticsApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,7 +118,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
