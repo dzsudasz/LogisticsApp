@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="Video 05:46 done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressSpecifications.java" afterDir="false" />
+    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="Paging and sorting part done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/AddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/TransportPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/TransportPlan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684543569851</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Paging and sorting part done">
+      <created>1684581615674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684581615674</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Video 05:46 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video 05:46 done" />
+    <MESSAGE value="Paging and sorting part done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paging and sorting part done" />
   </component>
 </project>

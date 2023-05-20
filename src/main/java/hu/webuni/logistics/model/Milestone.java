@@ -18,6 +18,14 @@ public class Milestone {
     private Address address;
     private LocalDateTime plannedTime;
 
+    public Milestone(Address address, LocalDateTime plannedTime) {
+        this.address = address;
+        this.plannedTime = plannedTime;
+    }
+
+    public Milestone() {
+    }
+
     public long getId() {
         return id;
     }

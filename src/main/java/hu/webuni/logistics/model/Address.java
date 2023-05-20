@@ -21,6 +21,17 @@ public class Address {
     private String longitude;
     private String latitude;
 
+    public Address(String countryCode, String city, String street, String zipCode, String number) {
+        this.countryCode = countryCode;
+        this.city = city;
+        this.street = street;
+        this.zipCode = zipCode;
+        this.number = number;
+    }
+
+    public Address() {
+    }
+
     public long getId() {
         return id;
     }

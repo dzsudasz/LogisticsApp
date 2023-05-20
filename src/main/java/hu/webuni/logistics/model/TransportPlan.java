@@ -19,6 +19,14 @@ public class TransportPlan {
     @OneToMany
     private List<Section> sectionList;
 
+    public TransportPlan(double expectedIncome, List<Section> sectionList) {
+        this.expectedIncome = expectedIncome;
+        this.sectionList = sectionList;
+    }
+
+    public TransportPlan() {
+    }
+
     public long getId() {
         return id;
     }

@@ -18,6 +18,15 @@ public class Section {
     private Milestone toMilestone;
     private int number;
 
+    public Section(Milestone fromMilestone, Milestone toMilestone, int number) {
+        this.fromMilestone = fromMilestone;
+        this.toMilestone = toMilestone;
+        this.number = number;
+    }
+
+    public Section() {
+    }
+
     public long getId() {
         return id;
     }
