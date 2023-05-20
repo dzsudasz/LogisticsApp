@@ -4,12 +4,16 @@ import hu.webuni.logistics.dto.AddressDto;
 import hu.webuni.logistics.mapper.AddressMapper;
 import hu.webuni.logistics.model.Address;
 import hu.webuni.logistics.service.AddressService;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
 
 import java.util.List;
 
@@ -58,5 +62,15 @@ public class AddressController {
         Address originalAddress = addressMapper.dtoToAddress(addressDto);
         Address modifiedAddress = addressService.modifyAddressById(id, originalAddress);
         return addressMapper.addressToDto(modifiedAddress);
+    }
+
+    @PostMapping("/search")
+    public List<AddressDto> filterAndSort(@RequestBody AddressDto exampleDto, Pageable pageable, HttpServletResponse response) {
+
+        Address exampleAddress = addressMapper.dtoToAddress(exampleDto);
+        List<Address> filteredAddresses = addressService.filterAndSort(exampleAddress, pageable);
+
+        response.addHeader("X-Total-Count", String.valueOf(filteredAddresses.size()));
+        return addressMapper.adressesToDtos(filteredAddresses);
     }
 }
