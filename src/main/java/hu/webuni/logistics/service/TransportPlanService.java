@@ -1,5 +1,6 @@
 package hu.webuni.logistics.service;
 
+import hu.webuni.logistics.config.LogisticsConfigProperties;
 import hu.webuni.logistics.dto.DelayDto;
 import hu.webuni.logistics.dto.TransportPlanDto;
 import hu.webuni.logistics.model.Milestone;
@@ -8,13 +9,14 @@ import hu.webuni.logistics.model.TransportPlan;
 import hu.webuni.logistics.repository.MilestoneRepository;
 import hu.webuni.logistics.repository.SectionRepository;
 import hu.webuni.logistics.repository.TransportPlanRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDateTime;
+import java.util.*;
 
 @Service
 public class TransportPlanService {
@@ -28,6 +30,10 @@ public class TransportPlanService {
     @Autowired
     SectionRepository sectionRepository;
 
+    @Autowired
+    LogisticsConfigProperties config;
+
+    @Transactional
     public void addDelay(long id, DelayDto delayDto) {
         TransportPlan transportPlan = transportPlanRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
@@ -55,19 +61,48 @@ public class TransportPlanService {
 
         Section foundSection = sectionRepository.findById(matchedSectionId).get();
 
+        LocalDateTime toMilestoneIncreasedTime = foundSection.getToMilestone()
+                .getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
         if (isFromMilestone) {
-            foundSection.getToMilestone().getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
-            foundSection.getFromMilestone().getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
+            LocalDateTime fromMilestoneIncreasedTime = foundSection.getFromMilestone()
+                    .getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
+
+            foundSection.getToMilestone().setPlannedTime(toMilestoneIncreasedTime);
+            foundSection.getFromMilestone().setPlannedTime(fromMilestoneIncreasedTime);
+
             sectionRepository.save(foundSection);
         }
         if (!isFromMilestone) {
-            foundSection.getToMilestone().getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
-            Section nextSection = sectionRepository.findByNumber(foundSection.getNumber()+1);
-            nextSection.getFromMilestone().getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
+            Optional<Section> nextSectionOptional = sectionRepository.findByNumber(foundSection.getNumber() + 1);
+            if (nextSectionOptional.isPresent()) {
+                Section nextSection = nextSectionOptional.get();
+                LocalDateTime nextFromMilestoneIncreasedTime = nextSection.getFromMilestone()
+                        .getPlannedTime().plusMinutes(delayDto.getDelayMinutes());
+
+                nextSection.getFromMilestone().setPlannedTime(nextFromMilestoneIncreasedTime);
+                sectionRepository.save(nextSection);
+            }
+
+
+            foundSection.getToMilestone().setPlannedTime(toMilestoneIncreasedTime);
+
             sectionRepository.save(foundSection);
-            sectionRepository.save(nextSection);
         }
 
-        //Késésért járó levonás
+
+        double expectedIncome = transportPlan.getExpectedIncome();
+        float deduction = (float) (100 - getDeductionPercent(delayDto)) / 100;
+        transportPlan.setExpectedIncome(expectedIncome * deduction);
+    }
+
+    private int getDeductionPercent(DelayDto delayDto) {
+        int percent = 0;
+        Set<Map.Entry<Integer, Integer>> configDelayPercent = config.getDelayMinutesDeductionPercent().entrySet();
+        for (Map.Entry<Integer, Integer> delayPercent : configDelayPercent) {
+            if (delayDto.getDelayMinutes() >= delayPercent.getKey()) {
+                percent = delayPercent.getValue();
+            }
+        }
+        return percent;
     }
 }

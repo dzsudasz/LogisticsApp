@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 @Service
 public class InitDbService {
@@ -62,7 +63,7 @@ public class InitDbService {
                 new Section(testMilestone5, testMilestone6, 2));
 
         TransportPlan testTransportPlan1 = transportPlanRepository.save(
-                new TransportPlan(30000, null));
+                new TransportPlan(30000, new ArrayList<>()));
         testTransportPlan1.getSectionList().add(testSection1);
         testTransportPlan1.getSectionList().add(testSection2);
         testTransportPlan1.getSectionList().add(testSection3);

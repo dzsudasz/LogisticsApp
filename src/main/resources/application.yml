@@ -12,3 +12,8 @@ spring:
 server:
   error:
     include-message: always
+logistics:
+  delayMinutesDeductionPercent:
+    30: 5
+    60: 10
+    120: 15

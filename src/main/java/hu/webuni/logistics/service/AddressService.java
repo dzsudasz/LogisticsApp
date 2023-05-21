@@ -1,7 +1,9 @@
 package hu.webuni.logistics.service;
 
 import hu.webuni.logistics.model.Address;
+import hu.webuni.logistics.model.Milestone;
 import hu.webuni.logistics.repository.AddressRepository;
+import hu.webuni.logistics.repository.MilestoneRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,6 +24,9 @@ public class AddressService {
     @Autowired
     AddressRepository addressRepository;
 
+    @Autowired
+    MilestoneRepository milestoneRepository;
+
     @Transactional
     public Address addNew(Address address) {
         return addressRepository.save(address);
@@ -38,8 +43,13 @@ public class AddressService {
 
     @Transactional
     public void deleteAddress(long id) {
+        Address address = addressRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        Milestone milestone = milestoneRepository.findByAddress(address);
 
-        addressRepository.deleteById(id);
+        milestone.setAddress(null);
+
+        addressRepository.delete(address);
     }
 
     @Transactional
