@@ -49,4 +49,22 @@ public class Milestone {
     public void setPlannedTime(LocalDateTime plannedTime) {
         this.plannedTime = plannedTime;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Milestone milestone)) return false;
+
+        if (id != milestone.id) return false;
+        if (!address.equals(milestone.address)) return false;
+        return plannedTime.equals(milestone.plannedTime);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + address.hashCode();
+        result = 31 * result + plannedTime.hashCode();
+        return result;
+    }
 }

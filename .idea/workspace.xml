@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="Paging and sorting part done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" afterDir="false" />
+    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="started TransportPlanService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/TransportPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/TransportPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/SectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/SectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,14 +43,14 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/LogisticsApp",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/LogisticsApp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="hu.webuni.logistics.model" />
@@ -114,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684581615674</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="started TransportPlanService">
+      <created>1684617959153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684617959153</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Video 05:46 done" />
     <MESSAGE value="Paging and sorting part done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paging and sorting part done" />
+    <MESSAGE value="started TransportPlanService" />
+    <option name="LAST_COMMIT_MESSAGE" value="started TransportPlanService" />
   </component>
 </project>

@@ -5,4 +5,6 @@ import hu.webuni.logistics.model.Section;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SectionRepository extends JpaRepository<Section, Long> {
+
+    Section findByNumber(int number);
 }
