@@ -47,7 +47,8 @@ public class AddressService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         Milestone milestone = milestoneRepository.findByAddress(address);
 
-        milestone.setAddress(null);
+        if (milestone != null)
+          milestone.setAddress(null);
 
         addressRepository.delete(address);
     }

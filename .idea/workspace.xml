@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="continue of TransportPlanService.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/config/LogisticsConfigProperties.java" afterDir="false" />
+    <list default="true" id="d34f3d28-3e60-4e70-abc1-1045b25e7105" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/LogisticsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/LogisticsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Milestone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/MilestoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/MilestoneRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/SectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/SectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/AddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +24,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,33 +47,25 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Pte9vmVJOcIGldyldybaZmfpYf" />
+  <component name="ProjectId" id="2QCm3LOpkTDEGOMlNAhmH5SVfNf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Java_Spring/week3/hr",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "last_opened_file_path": "C:/Users/jutom/Documents/Java_Spring/week3/hr"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="hu.webuni.logistics.model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\LogisticsApp\src\main\java\hu\webuni\logistics\dto" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="hu.webuni.logistics.model" />
+      <recent name="hu.webuni.logistics.dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hu.webuni.logistics.repository" />
-      <recent name="hu.webuni.logistics.dto" />
+      <recent name="hu.webuni.logistics.security" />
     </key>
   </component>
   <component name="RunManager">
@@ -87,6 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="LogisticsApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="LogisticsApp" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LogisticsApplication" />
@@ -96,41 +104,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eeedfb9f-7f40-438d-aa6a-6fa92030d0bf" name="Changes" comment="" />
-      <created>1684280658851</created>
+      <changelist id="d34f3d28-3e60-4e70-abc1-1045b25e7105" name="Changes" comment="" />
+      <created>1684865738462</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684280658851</updated>
+      <updated>1684865738462</updated>
     </task>
-    <task id="LOCAL-00001" summary="Video 05:46 done">
-      <created>1684543569851</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684543569851</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Paging and sorting part done">
-      <created>1684581615674</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684581615674</updated>
-    </task>
-    <task id="LOCAL-00003" summary="started TransportPlanService">
-      <created>1684617959153</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1684617959153</updated>
-    </task>
-    <task id="LOCAL-00004" summary="continue of TransportPlanService.java">
-      <created>1684656097121</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1684656097121</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,45 +117,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Video 05:46 done" />
-    <MESSAGE value="Paging and sorting part done" />
-    <MESSAGE value="started TransportPlanService" />
-    <MESSAGE value="continue of TransportPlanService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue of TransportPlanService.java" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/TransportPlanService.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="foundSection.getToMilestone().getPlannedTime().plusMinutes(delayDto.getDelayMinutes())" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

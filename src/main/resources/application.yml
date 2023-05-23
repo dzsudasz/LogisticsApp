@@ -17,3 +17,7 @@ logistics:
     30: 5
     60: 10
     120: 15
+
+logging:
+  level:
+    org.springframework.security: debug

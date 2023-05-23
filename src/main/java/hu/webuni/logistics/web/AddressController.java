@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -27,6 +28,7 @@ public class AddressController {
     AddressMapper addressMapper;
 
     @PostMapping
+    @PreAuthorize("hasAuthority('AddressManager')")
     public AddressDto addNewAddress(@RequestBody @Valid AddressDto addressDto) {
         if (addressDto.getId() != null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
