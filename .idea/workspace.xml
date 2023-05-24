@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d34f3d28-3e60-4e70-abc1-1045b25e7105" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/TransportPlanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/TransportPlanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,14 +51,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/jutom/Documents/Java_Spring/week3/hr"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jutom/Documents/Java_Spring/week3/hr&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="hu.webuni.logistics.dto" />
@@ -68,7 +67,7 @@
       <recent name="hu.webuni.logistics.security" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TransportControllerIT">
     <configuration name="LogisticsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hu.webuni.logistics.LogisticsApplication" />
       <module name="logistics" />
@@ -78,6 +77,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransportControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.webuni.logistics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.webuni.logistics" />
+      <option name="MAIN_CLASS_NAME" value="hu.webuni.logistics.TransportControllerIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransportControllerIT.checkIfThirtyMinutesDelayCanBeAddedToFromMilestone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.webuni.logistics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.webuni.logistics" />
+      <option name="MAIN_CLASS_NAME" value="hu.webuni.logistics.TransportControllerIT" />
+      <option name="METHOD_NAME" value="checkIfThirtyMinutesDelayCanBeAddedToFromMilestone" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransportControllerIT" />
         <item itemvalue="Application.LogisticsApplication" />
+        <item itemvalue="JUnit.TransportControllerIT.checkIfThirtyMinutesDelayCanBeAddedToFromMilestone" />
       </list>
     </recent_temporary>
   </component>
@@ -122,5 +154,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="foundSection.getNumber()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

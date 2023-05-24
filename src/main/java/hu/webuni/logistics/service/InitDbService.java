@@ -68,4 +68,12 @@ public class InitDbService {
         testTransportPlan1.getSectionList().add(testSection2);
         testTransportPlan1.getSectionList().add(testSection3);
     }
+
+    @Transactional
+    public void deleteDb() {
+        transportPlanRepository.deleteAll();
+        sectionRepository.deleteAll();
+        milestoneRepository.deleteAll();
+        addressRepository.deleteAll();
+    }
 }

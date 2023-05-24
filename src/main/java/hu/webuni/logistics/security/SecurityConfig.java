@@ -54,7 +54,7 @@ public class SecurityConfig {
                 .hasAnyAuthority(ADDRESS_MANAGER)
                 .requestMatchers(HttpMethod.PUT, "/api/addresses/**")
                 .hasAnyAuthority(ADDRESS_MANAGER)
-                .requestMatchers(HttpMethod.POST, "/api/transportPlans")
+                .requestMatchers(HttpMethod.POST, "/api/transportPlans/**")
                 .hasAnyAuthority(TRANSPORT_MANAGER)
                 .anyRequest().permitAll();
 
