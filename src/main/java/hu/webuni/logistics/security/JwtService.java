@@ -3,7 +3,6 @@ package hu.webuni.logistics.security;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -19,8 +18,7 @@ public class JwtService {
 
     public static final String AUTH = "auth";
     public static final String ISSUER = "jtamas.logistics";
-    public static final String TITOK = "titok";
-
+    public static final String SECRET = "secret";
 
     public String createJwtToken(UserDetails principal) {
 
@@ -29,12 +27,12 @@ public class JwtService {
                 .withArrayClaim(AUTH, principal.getAuthorities().stream().map(GrantedAuthority::getAuthority).toArray(String[]::new))
                 .withExpiresAt(new Date(System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(10)))
                 .withIssuer(ISSUER)
-                .sign(Algorithm.HMAC256(TITOK));
+                .sign(Algorithm.HMAC256(SECRET));
     }
 
     public UserDetails parseJwt(String jwtToken) {
 
-        DecodedJWT decodedJwt = JWT.require(Algorithm.HMAC256(TITOK))
+        DecodedJWT decodedJwt = JWT.require(Algorithm.HMAC256(SECRET))
                 .withIssuer(ISSUER)
                 .build().verify(jwtToken);
         return new User(decodedJwt.getSubject(),"dummy",

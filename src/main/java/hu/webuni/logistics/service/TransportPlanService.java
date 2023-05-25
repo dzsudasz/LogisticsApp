@@ -42,7 +42,7 @@ public class TransportPlanService {
 
         boolean foundMatch = false;
         Long matchedSectionId = null;
-        Boolean isFromMilestone = null;
+        boolean isFromMilestone = false;
 
         for (Section section : transportPlan.getSectionList()) {
             if (section.getFromMilestone().equals(milestone)) {
@@ -59,7 +59,8 @@ public class TransportPlanService {
         if (!foundMatch)
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
 
-        Section foundSection = sectionRepository.findById(matchedSectionId).get();
+        Section foundSection = sectionRepository.findById(matchedSectionId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         LocalDateTime toMilestoneIncreasedTime = foundSection.getToMilestone()
                 .getPlannedTime().plusMinutes(delayDto.getDelayMinutes());

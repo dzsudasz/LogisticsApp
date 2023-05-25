@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d34f3d28-3e60-4e70-abc1-1045b25e7105" name="Changes" comment="">
+    <list default="true" id="d34f3d28-3e60-4e70-abc1-1045b25e7105" name="Changes" comment="ITs done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/DelayDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/dto/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/model/Section.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/TransportPlanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/repository/TransportPlanRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/service/InitDbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/webuni/logistics/web/TransportPlanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/webuni/logistics/TransportControllerIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +134,14 @@
       <option name="presentableId" value="Default" />
       <updated>1684865738462</updated>
     </task>
+    <task id="LOCAL-00001" summary="ITs done">
+      <created>1684956773930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684956773930</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +154,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ITs done" />
+    <option name="LAST_COMMIT_MESSAGE" value="ITs done" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
